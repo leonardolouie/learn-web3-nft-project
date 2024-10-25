@@ -23,7 +23,7 @@ contract SpaceBear is ERC721, ERC721URIStorage, Ownable {
 
   function safeMint(address to, string memory uri) public onlyOwner {
     uint256 tokenId = _nextTokenId++;
-    console.log("got here tokenID", tokenId);
+    console.log("Your token placed here", tokenId);
     _safeMint(to, tokenId);
     _setTokenURI(tokenId, uri);
   }

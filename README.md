@@ -77,3 +77,24 @@ To verify your contracts, you can use the following command in the Truffle conso
 ```bash
 truffle run verify SpaceBear --network sepolia
 ```
+
+## Forking a network outside local machine using Ganache and Infura
+
+To fork a network for validating or debugging something outside the local network, simply run: `ganache --fork.network <network>` Replace <network> with the desired network you want to fork (e.g., mainnet or a testnet).:
+
+```bash
+ ganache --fork.network sepolia
+```
+
+open the forked network
+
+```bash
+
+truffle console --network ganache
+```
+
+start to debug
+
+```bash
+debug txHash
+```
