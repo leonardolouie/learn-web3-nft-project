@@ -16,12 +16,18 @@ Make sure you have the following installed:
 
 You can use Truffle’s built-in development environment to compile, migrate, and test your contracts on a local Ganache instance.
 
-### Start Truffle Development Console
+### Start Truffle Development Console with Ganache
 
-To open the Truffle development console and spin up a local blockchain, run the following command:
+To open the Truffle development console and spin up a local blockchain using ganache, run the following command:
 
 ```bash
-truffle develop
+ganache
+```
+
+Open new Terminal and Run this:
+
+```bash
+truffle console --network ganache
 ```
 
 ### Compile the Contracts
@@ -37,7 +43,7 @@ truffle compile
 To deploy your contracts on the local development blockchain, run:
 
 ```bash
-truffle migrate
+migrate
 ```
 
 ## Running Tests
