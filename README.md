@@ -1,6 +1,6 @@
 # Learn Web3 NFT Project
 
-This project demonstrates how to build and deploy a basic NFT project using Solidity, Truffle, and Ganache.
+This project demonstrates how to build and deploy a basic NFT(ERC721) project using Solidity, Truffle, and Ganache.
 
 ## Prerequisites
 
@@ -52,4 +52,28 @@ To run the tests for your contracts, you can use the following command in the Tr
 
 ```bash
 truffle test
+```
+
+## Deploy your contract in to the Test Network or Mainnet using Infura
+
+To deploy your contract, ensure you have your .infura and .secrets files set up with your Infura Project ID and seed phrase, then run truffle migrate --network [network_name] in your terminal Create an account on [https://app.infura.io/](https://app.infura.io/) if you haven't already.
+
+```bash
+truffle migrate --network <network_name>
+```
+
+## Deploy your contract using truffle dashboard
+
+To deploy your contract you can use the following command in the Truffle console or your terminal:
+
+```bash
+truffle dashboard
+```
+
+## Verify your contract in the Etherscan
+
+To verify your contracts, you can use the following command in the Truffle console or your terminal, make sure the .etherscan file has your api key:
+
+```bash
+truffle run verify SpaceBear --network sepolia
 ```
