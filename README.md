@@ -54,7 +54,7 @@ To run the tests for your contracts, you can use the following command in the Tr
 truffle test
 ```
 
-## Deploy your contract in to the Test Network or Mainnet using Infura
+## Deploy your contract in to the Test Network or Mainnet using Infura HDWallet Provider
 
 To deploy your contract, ensure you have your .infura and .secrets files set up with your Infura Project ID and seed phrase, then run truffle migrate --network [network_name] in your terminal Create an account on [https://app.infura.io/](https://app.infura.io/) if you haven't already.
 
