@@ -1,100 +1,32 @@
-# Learn Web3 NFT Project
+# Web3 NFT Project Overview
 
-This project demonstrates how to build and deploy a basic NFT(ERC721) project using Solidity, Truffle, and Ganache.
+This repository demonstrates how to build and deploy a basic NFT (ERC721) project using two popular Ethereum development frameworks: Hardhat and Truffle. Both frameworks provide powerful tools for smart contract development, testing, and deployment.
 
-## Prerequisites
+## Project Structure
 
-Make sure you have the following installed:
+The project is divided into two main folders:
 
-- Node.js
-- Truffle - Framework for smart contract development.
-- Ganache - Personal blockchain for Ethereum development.
-- Infura - Ethereum blockchain node provider.
-- MetaMask - Web3 wallet for interacting with Ethereum.
+Hardhat:
 
-## Running the Application Locally
+- Uses Hardhat for smart contract development.
+- Provides commands for compiling contracts, deploying them to test networks, and running tests.
+- Supports forking networks using Infura for debugging and validation.
 
-You can use Truffle’s built-in development environment to compile, migrate, and test your contracts on a local Ganache instance.
+Truffle:
 
-### Start Truffle Development Console with Ganache
+- Utilizes Truffle for smart contract development and testing.
+- Allows for compiling, migrating, and testing contracts on a local Ganache instance.
+- Offers features for deploying contracts to test networks and verifying them on Etherscan.-
 
-To open the Truffle development console and spin up a local blockchain using ganache, run the following command:
+## Contract Overview
 
-```bash
-ganache
-```
+SpaceBear Contract Overview
+The SpaceBear contract is an ERC721 token implementation for minting and managing NFTs (Non-Fungible Tokens). It leverages OpenZeppelin Contracts to ensure security and compliance with ERC721 standards.
 
-Open new Terminal and Run this:
+Key Features:
 
-```bash
-truffle console --network ganache
-```
-
-### Compile the Contracts
-
-Once the console is open, you can compile your contracts by running:
-
-```bash
-truffle compile
-```
-
-## Migrate the Contracts
-
-To deploy your contracts on the local development blockchain, run:
-
-```bash
-migrate
-```
-
-## Running Tests
-
-To run the tests for your contracts, you can use the following command in the Truffle console or your terminal:
-
-```bash
-truffle test
-```
-
-## Deploy your contract in to the Test Network or Mainnet using Infura HDWallet Provider
-
-To deploy your contract, ensure you have your .infura and .secrets files set up with your Infura Project ID and seed phrase, then run truffle migrate --network [network_name] in your terminal Create an account on [https://app.infura.io/](https://app.infura.io/) if you haven't already.
-
-```bash
-truffle migrate --network <network_name>
-```
-
-## Deploy your contract using truffle dashboard
-
-To deploy your contract you can use the following command in the Truffle console or your terminal:
-
-```bash
-truffle dashboard
-```
-
-## Verify your contract in the Etherscan
-
-To verify your contracts, you can use the following command in the Truffle console or your terminal, make sure the .etherscan file has your api key:
-
-```bash
-truffle run verify SpaceBear --network sepolia
-```
-
-## Forking a network outside local machine using Ganache and Infura
-
-To fork a network for validating or debugging something outside the local network, simply run: `ganache --fork.network <network>` Replace <network> with the desired network you want to fork (e.g., mainnet or a testnet).:
-
-```bash
- ganache --fork.network sepolia
-```
-
-open the forked network
-
-```bash
-
-truffle console --network ganache
-```
-
-start to debug
-
-```bash
-debug txHash
-```
+- Token Standard: Implements ERC721 and ERC721URIStorage standards, allowing for unique token identifiers and associated metadata.
+- Owner Control: Inherits from the Ownable contract, enabling the contract creator to manage minting and token ownership.
+- Minting Functionality: Includes a safeMint function that allows the owner to mint new tokens, assigning them to specified addresses with a corresponding metadata URI.
+- Base URI: Overrides the \_baseURI function to provide a base URL for the token metadata, ensuring that the token details can be easily retrieved.
+- Interface Support: Overrides supportsInterface to comply with ERC721 standards, confirming that the contract supports various interface identifiers.
