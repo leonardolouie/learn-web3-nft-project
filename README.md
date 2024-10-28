@@ -4,7 +4,7 @@ This repository demonstrates how to build and deploy a basic NFT (ERC721) projec
 
 ## Project Structure
 
-The project is divided into two main folders:
+The project is divided into 3 main folders:
 
 Hardhat:
 
@@ -17,6 +17,10 @@ Truffle:
 - Utilizes Truffle for smart contract development and testing.
 - Allows for compiling, migrating, and testing contracts on a local Ganache instance.
 - Offers features for deploying contracts to test networks and verifying them on Etherscan.-
+
+Foundry
+
+- Utilizes Truffle for smart contract development and testing.
 
 ## Contract Overview
 
